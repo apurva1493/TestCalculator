@@ -1,37 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="tc" duration-ms="27833" started-at="2021-12-02T09:20:38 IST" finished-at="2021-12-02T09:21:06 IST">
+  <suite name="tc" duration-ms="19970" started-at="2021-12-02T12:56:07 IST" finished-at="2021-12-02T12:56:27 IST">
     <groups>
-      <group name="include-test-two">
-        <method signature="TC_Calclulator.testMethodTwo()[pri:0, instance:tc.TC_Calclulator@57e1b0c]" name="testMethodTwo" class="tc.TC_Calclulator"/>
-      </group> <!-- include-test-two -->
-      <group name="test-two-exclude">
-        <method signature="TC_Calclulator.testMethodFour()[pri:0, instance:tc.TC_Calclulator@57e1b0c]" name="testMethodFour" class="tc.TC_Calclulator"/>
-      </group> <!-- test-two-exclude -->
-      <group name="test-one-exclude">
-        <method signature="TC_Calclulator.testMethodThree()[pri:0, instance:tc.TC_Calclulator@57e1b0c]" name="testMethodThree" class="tc.TC_Calclulator"/>
-      </group> <!-- test-one-exclude -->
     </groups>
-    <test name="testMethodTwo" duration-ms="27833" started-at="2021-12-02T09:20:38 IST" finished-at="2021-12-02T09:21:06 IST">
+    <test name="testMethodTwo" duration-ms="19970" started-at="2021-12-02T12:56:07 IST" finished-at="2021-12-02T12:56:27 IST">
       <class name="tc.TC_Calclulator">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tc.TC_Calclulator@57e1b0c]" name="setup" is-config="true" duration-ms="18105" started-at="2021-12-02T09:20:38 IST" finished-at="2021-12-02T09:20:56 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tc.TC_Calclulator@1d8d30f7]" name="setup" is-config="true" duration-ms="33971" started-at="2021-12-02T12:55:33 IST" finished-at="2021-12-02T12:56:07 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testMethodFour()[pri:0, instance:tc.TC_Calclulator@57e1b0c]" name="testMethodFour" duration-ms="2" started-at="2021-12-02T09:20:56 IST" finished-at="2021-12-02T09:20:56 IST">
+        <test-method status="FAIL" signature="Tc_CheckBorrowingEstimate()[pri:0, instance:tc.TC_Calclulator@1d8d30f7]" name="Tc_CheckBorrowingEstimate" duration-ms="8126" started-at="2021-12-02T12:56:07 IST" finished-at="2021-12-02T12:56:15 IST">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [$483,005] but found [$483,000]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [$483,005] but found [$483,000]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at tc.TC_Calclulator.ValidateCalculate(TC_Calclulator.java:57)
+at tc.TC_Calclulator.Tc_CheckBorrowingEstimate(TC_Calclulator.java:15)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethodFour -->
-        <test-method status="PASS" signature="testMethodThree()[pri:0, instance:tc.TC_Calclulator@57e1b0c]" name="testMethodThree" duration-ms="0" started-at="2021-12-02T09:20:56 IST" finished-at="2021-12-02T09:20:56 IST">
+        </test-method> <!-- Tc_CheckBorrowingEstimate -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tc.TC_Calclulator@1d8d30f7]" name="tearDown" is-config="true" duration-ms="1864" started-at="2021-12-02T12:56:15 IST" finished-at="2021-12-02T12:56:17 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Tc_CheckBorrowingEstimate status=FAILURE method=TC_Calclulator.Tc_CheckBorrowingEstimate()[pri:0, instance:tc.TC_Calclulator@1d8d30f7] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethodThree -->
-        <test-method status="PASS" signature="testMethodTwo()[pri:0, instance:tc.TC_Calclulator@57e1b0c]" name="testMethodTwo" duration-ms="9672" started-at="2021-12-02T09:20:56 IST" finished-at="2021-12-02T09:21:06 IST">
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="Tc_LivingExpenseValidation()[pri:0, instance:tc.TC_Calclulator@1d8d30f7]" name="Tc_LivingExpenseValidation" duration-ms="5115" started-at="2021-12-02T12:56:17 IST" finished-at="2021-12-02T12:56:22 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMethodTwo -->
+        </test-method> <!-- Tc_LivingExpenseValidation -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tc.TC_Calclulator@1d8d30f7]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-12-02T12:56:22 IST" finished-at="2021-12-02T12:56:22 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Tc_LivingExpenseValidation status=SUCCESS method=TC_Calclulator.Tc_LivingExpenseValidation()[pri:0, instance:tc.TC_Calclulator@1d8d30f7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="Tc_VerifyStartOver()[pri:0, instance:tc.TC_Calclulator@1d8d30f7]" name="Tc_VerifyStartOver" duration-ms="4378" started-at="2021-12-02T12:56:22 IST" finished-at="2021-12-02T12:56:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_VerifyStartOver -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tc.TC_Calclulator@1d8d30f7]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-12-02T12:56:27 IST" finished-at="2021-12-02T12:56:27 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Tc_VerifyStartOver status=SUCCESS method=TC_Calclulator.Tc_VerifyStartOver()[pri:0, instance:tc.TC_Calclulator@1d8d30f7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:tc.TC_Calclulator@1d8d30f7]" name="TearDown" is-config="true" duration-ms="928" started-at="2021-12-02T12:56:27 IST" finished-at="2021-12-02T12:56:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
       </class> <!-- tc.TC_Calclulator -->
     </test> <!-- testMethodTwo -->
   </suite> <!-- tc -->

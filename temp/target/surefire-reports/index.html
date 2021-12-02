@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-tc">
-              <span class="suite-name border-passed">tc</span>
+              <span class="suite-name border-failed">tc</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-tc">
-                    <span>C:\Users\Dell\eclipse-workspace\workplace21\temp\src\test\resources\testngrunner.xml</span>
+                    <span>C:\Users\Dell\git\TestCalculator\temp\src\test\resources\testngrunner.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -61,7 +61,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-tc">
-                    <span>3 groups</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-tc" class="hide-methods failed suite-tc"> (hide)</a> <!-- hide-methods failed suite-tc -->
+                      <a href="#" panel-name="suite-tc" class="show-methods failed suite-tc"> (show)</a> <!-- show-methods failed suite-tc -->
+                    </span>
+                    <div class="method-list-content failed suite-tc">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-tc" title="tc.TC_Calclulator" hash-for-method="Tc_CheckBorrowingEstimate">Tc_CheckBorrowingEstimate</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-tc -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,17 +118,12 @@
                     <div class="method-list-content passed suite-tc">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-tc" title="tc.TC_Calclulator" hash-for-method="testMethodFour">testMethodFour</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-tc" title="tc.TC_Calclulator" hash-for-method="Tc_LivingExpenseValidation">Tc_LivingExpenseValidation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-tc" title="tc.TC_Calclulator" hash-for-method="testMethodThree">testMethodThree</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-tc" title="tc.TC_Calclulator" hash-for-method="testMethodTwo">testMethodTwo</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-tc" title="tc.TC_Calclulator" hash-for-method="Tc_VerifyStartOver">Tc_VerifyStartOver</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-tc -->
@@ -129,6 +138,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-tc" class="panel tc">
+          <div class="suite-tc-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tc.TC_Calclulator</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Tc_CheckBorrowingEstimate">
+                  </a> <!-- Tc_CheckBorrowingEstimate -->
+                  <span class="method-name">Tc_CheckBorrowingEstimate</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [$483,005] but found [$483,000]
+	at tc.TC_Calclulator.ValidateCalculate(TC_Calclulator.java:57)
+	at tc.TC_Calclulator.Tc_CheckBorrowingEstimate(TC_Calclulator.java:15)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tc-class-failed -->
           <div class="suite-tc-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -137,23 +167,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testMethodFour">
-                  </a> <!-- testMethodFour -->
-                  <span class="method-name">testMethodFour</span>
+                  <a name="Tc_LivingExpenseValidation">
+                  </a> <!-- Tc_LivingExpenseValidation -->
+                  <span class="method-name">Tc_LivingExpenseValidation</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testMethodThree">
-                  </a> <!-- testMethodThree -->
-                  <span class="method-name">testMethodThree</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testMethodTwo">
-                  </a> <!-- testMethodTwo -->
-                  <span class="method-name">testMethodTwo</span>
+                  <a name="Tc_VerifyStartOver">
+                  </a> <!-- Tc_VerifyStartOver -->
+                  <span class="method-name">Tc_VerifyStartOver</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -161,7 +184,7 @@
         </div> <!-- panel tc -->
         <div panel-name="test-xml-tc" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Dell\eclipse-workspace\workplace21\temp\src\test\resources\testngrunner.xml</span>
+            <span class="header-content">C:\Users\Dell\git\TestCalculator\temp\src\test\resources\testngrunner.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -194,30 +217,6 @@
             <span class="header-content">Groups for tc</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">include-test-two</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">testMethodTwo</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">test-one-exclude</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">testMethodThree</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">test-two-exclude</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">testMethodFour</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-tc" class="panel">
@@ -236,22 +235,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testMethodTwo')
+data.setCell(0, 1, 'Tc_CheckBorrowingEstimate')
 data.setCell(0, 2, 'tc.TC_Calclulator')
-data.setCell(0, 3, 9672);
+data.setCell(0, 3, 8126);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testMethodFour')
+data.setCell(1, 1, 'Tc_LivingExpenseValidation')
 data.setCell(1, 2, 'tc.TC_Calclulator')
-data.setCell(1, 3, 2);
+data.setCell(1, 3, 5115);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testMethodThree')
+data.setCell(2, 1, 'Tc_VerifyStartOver')
 data.setCell(2, 2, 'tc.TC_Calclulator')
-data.setCell(2, 3, 0);
+data.setCell(2, 3, 4378);
 window.suiteTableData['tc']= { tableData: data, tableDiv: 'times-div-tc'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-tc">
               </div> <!-- times-div-tc -->
             </div> <!-- times-div -->
@@ -278,22 +277,40 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">tc.TC_Calclulator</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
+              <div class="configuration-suite before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
+              </div> <!-- configuration-suite before -->
               <div class="test-method">
-                <span class="method-name">testMethodFour</span>
-                <span class="method-start">18144 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Tc_CheckBorrowingEstimate</span>
+                <span class="method-start">34083 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=Tc_CheckBorrowingEstimate status=FAILURE method=TC_Calclulator.Tc_CheckBorrowingEst...)</span>
+                <span class="method-start">42576 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">testMethodThree</span>
-                <span class="method-start">18149 ms</span>
+                <span class="method-name">Tc_LivingExpenseValidation</span>
+                <span class="method-start">44444 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=Tc_LivingExpenseValidation status=SUCCESS method=TC_Calclulator.Tc_LivingExpenseVal...)</span>
+                <span class="method-start">49560 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">testMethodTwo</span>
-                <span class="method-start">18150 ms</span>
+                <span class="method-name">Tc_VerifyStartOver</span>
+                <span class="method-start">49561 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=Tc_VerifyStartOver status=SUCCESS method=TC_Calclulator.Tc_VerifyStartOver()[pri:0,...)</span>
+                <span class="method-start">53940 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">TearDown</span>
+                <span class="method-start">54073 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

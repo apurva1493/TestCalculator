@@ -1,0 +1,201 @@
+# Created at 2021-12-02T11:35:02.499
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (7964@Dell-PC):
+"AsyncHttpClient-1-2" 
+   java.lang.Thread.State: RUNNABLE
+        at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method)
+        at sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source)
+        at sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source)
+        at sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source)
+        at sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source)
+        at sun.nio.ch.SelectorImpl.select(Unknown Source)
+        at sun.nio.ch.SelectorImpl.select(Unknown Source)
+        at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+        at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:810)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:457)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+        at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.lang.Thread.run(Unknown Source)
+
+"Keep-Alive-Timer" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.lang.Thread.sleep(Native Method)
+        at sun.net.www.http.KeepAliveCache.run(Unknown Source)
+        at java.lang.Thread.run(Unknown Source)
+
+"Exec Stream Pumper" 
+   java.lang.Thread.State: RUNNABLE
+        at java.io.FileInputStream.readBytes(Native Method)
+        at java.io.FileInputStream.read(Unknown Source)
+        at org.apache.commons.exec.StreamPumper.run(StreamPumper.java:107)
+        at java.lang.Thread.run(Unknown Source)
+
+"Exec Stream Pumper" 
+   java.lang.Thread.State: RUNNABLE
+        at java.io.FileInputStream.readBytes(Native Method)
+        at java.io.FileInputStream.read(Unknown Source)
+        at java.io.BufferedInputStream.fill(Unknown Source)
+        at java.io.BufferedInputStream.read1(Unknown Source)
+        at java.io.BufferedInputStream.read(Unknown Source)
+        at java.io.FilterInputStream.read(Unknown Source)
+        at org.apache.commons.exec.StreamPumper.run(StreamPumper.java:107)
+        at java.lang.Thread.run(Unknown Source)
+
+"UrlChecker-2" 
+   java.lang.Thread.State: TIMED_WAITING
+        at sun.misc.Unsafe.park(Native Method)
+        at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+        at java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(Unknown Source)
+        at java.util.concurrent.SynchronousQueue$TransferStack.transfer(Unknown Source)
+        at java.util.concurrent.SynchronousQueue.poll(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+        at java.lang.Thread.run(Unknown Source)
+
+"Driver Service Executor" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.lang.Thread.sleep(Native Method)
+        at org.openqa.selenium.os.OsProcess.waitFor(OsProcess.java:170)
+        at org.openqa.selenium.os.CommandLine.waitFor(CommandLine.java:127)
+        at org.openqa.selenium.remote.service.DriverService.lambda$start$2(DriverService.java:208)
+        at org.openqa.selenium.remote.service.DriverService$$Lambda$190/837457281.get(Unknown Source)
+        at java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+        at java.lang.Thread.run(Unknown Source)
+
+"Driver Service Executor" 
+   java.lang.Thread.State: WAITING
+        at sun.misc.Unsafe.park(Native Method)
+        at java.util.concurrent.locks.LockSupport.park(Unknown Source)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+        at java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+        at java.lang.Thread.run(Unknown Source)
+
+"Exec Default Executor" 
+   java.lang.Thread.State: RUNNABLE
+        at java.lang.ProcessImpl.waitForInterruptibly(Native Method)
+        at java.lang.ProcessImpl.waitFor(Unknown Source)
+        at org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:364)
+        at org.apache.commons.exec.DefaultExecutor.access$200(DefaultExecutor.java:48)
+        at org.apache.commons.exec.DefaultExecutor$1.run(DefaultExecutor.java:200)
+        at java.lang.Thread.run(Unknown Source)
+
+"AsyncHttpClient-1-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.lang.Thread.sleep(Native Method)
+        at io.netty.util.HashedWheelTimer$Worker.waitForNextTick(HashedWheelTimer.java:566)
+        at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:462)
+        at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+        at java.lang.Thread.run(Unknown Source)
+
+"ForkJoinPool.commonPool-worker-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at sun.misc.Unsafe.park(Native Method)
+        at java.util.concurrent.ForkJoinPool.awaitWork(Unknown Source)
+        at java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)
+        at java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at sun.management.ThreadImpl.getThreadInfo(Unknown Source)
+        at org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:649)
+        at org.apache.maven.surefire.booter.ForkedBooter.access$400(ForkedBooter.java:82)
+        at org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:340)
+        at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:423)
+        at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:435)
+        at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:388)
+        at java.lang.Thread.run(Unknown Source)
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+        at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+        at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+
+"Reference Handler" 
+   java.lang.Thread.State: WAITING
+        at java.lang.Object.wait(Native Method)
+        at java.lang.Object.wait(Unknown Source)
+        at java.lang.ref.Reference.tryHandlePending(Unknown Source)
+        at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+
+"Forwarding newSession on session null to remote" 
+   java.lang.Thread.State: TIMED_WAITING
+        at sun.misc.Unsafe.park(Native Method)
+        at java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+        at java.util.concurrent.CompletableFuture$Signaller.block(Unknown Source)
+        at java.util.concurrent.ForkJoinPool.managedBlock(Unknown Source)
+        at java.util.concurrent.CompletableFuture.timedGet(Unknown Source)
+        at java.util.concurrent.CompletableFuture.get(Unknown Source)
+        at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
+        at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:66)
+        at org.openqa.selenium.remote.http.netty.NettyHttpHandler$$Lambda$97/888473870.execute(Unknown Source)
+        at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+        at org.openqa.selenium.remote.http.AddSeleniumUserAgent$$Lambda$298/1696263571.execute(Unknown Source)
+        at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+        at org.openqa.selenium.remote.http.Filter$$Lambda$98/170144208.execute(Unknown Source)
+        at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:51)
+        at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+        at org.openqa.selenium.remote.http.AddSeleniumUserAgent$$Lambda$298/1696263571.execute(Unknown Source)
+        at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+        at org.openqa.selenium.remote.http.Filter$$Lambda$98/170144208.execute(Unknown Source)
+        at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:119)
+        at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
+        at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
+        at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
+        at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+        at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+        at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+        at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+        at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
+        at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:168)
+        at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:108)
+        at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:104)
+        at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:91)
+        at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:46)
+        at utils.Init.setup(Init.java:25)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.lang.reflect.Method.invoke(Unknown Source)
+        at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+        at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+        at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+        at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+        at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
+        at org.testng.TestRunner.beforeRun(TestRunner.java:627)
+        at org.testng.TestRunner.run(TestRunner.java:589)
+        at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+        at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+        at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+        at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+        at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+        at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+        at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+        at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+        at org.testng.TestNG.runSuites(TestNG.java:1063)
+        at org.testng.TestNG.run(TestNG.java:1031)
+        at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)
+        at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+        at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+        at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+
+
+

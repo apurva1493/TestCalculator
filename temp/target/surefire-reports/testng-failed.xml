@@ -5,7 +5,10 @@
     <classes>
       <class name="tc.TC_Calclulator">
         <methods>
-          <include name="testMethodTwo"/>
+          <include name="Tc_CheckBorrowingEstimate"/>
+          <include name="tearDown"/>
+          <include name="TearDown"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- tc.TC_Calclulator -->
     </classes>
