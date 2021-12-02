@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="tc" duration-ms="27833" started-at="2021-12-02T09:20:38 IST" finished-at="2021-12-02T09:21:06 IST">
+    <groups>
+      <group name="include-test-two">
+        <method signature="TC_Calclulator.testMethodTwo()[pri:0, instance:tc.TC_Calclulator@57e1b0c]" name="testMethodTwo" class="tc.TC_Calclulator"/>
+      </group> <!-- include-test-two -->
+      <group name="test-two-exclude">
+        <method signature="TC_Calclulator.testMethodFour()[pri:0, instance:tc.TC_Calclulator@57e1b0c]" name="testMethodFour" class="tc.TC_Calclulator"/>
+      </group> <!-- test-two-exclude -->
+      <group name="test-one-exclude">
+        <method signature="TC_Calclulator.testMethodThree()[pri:0, instance:tc.TC_Calclulator@57e1b0c]" name="testMethodThree" class="tc.TC_Calclulator"/>
+      </group> <!-- test-one-exclude -->
+    </groups>
+    <test name="testMethodTwo" duration-ms="27833" started-at="2021-12-02T09:20:38 IST" finished-at="2021-12-02T09:21:06 IST">
+      <class name="tc.TC_Calclulator">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tc.TC_Calclulator@57e1b0c]" name="setup" is-config="true" duration-ms="18105" started-at="2021-12-02T09:20:38 IST" finished-at="2021-12-02T09:20:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testMethodFour()[pri:0, instance:tc.TC_Calclulator@57e1b0c]" name="testMethodFour" duration-ms="2" started-at="2021-12-02T09:20:56 IST" finished-at="2021-12-02T09:20:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodFour -->
+        <test-method status="PASS" signature="testMethodThree()[pri:0, instance:tc.TC_Calclulator@57e1b0c]" name="testMethodThree" duration-ms="0" started-at="2021-12-02T09:20:56 IST" finished-at="2021-12-02T09:20:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodThree -->
+        <test-method status="PASS" signature="testMethodTwo()[pri:0, instance:tc.TC_Calclulator@57e1b0c]" name="testMethodTwo" duration-ms="9672" started-at="2021-12-02T09:20:56 IST" finished-at="2021-12-02T09:21:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethodTwo -->
+      </class> <!-- tc.TC_Calclulator -->
+    </test> <!-- testMethodTwo -->
+  </suite> <!-- tc -->
+</testng-results>
